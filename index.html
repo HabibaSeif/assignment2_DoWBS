@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal CV webpage of Habiba Seif, Computer Engineering student at The American University in Cairo.">
+    <title>Habiba Seif | Computer Engineering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Feature: Welcome message (shown by script.js on page load) -->
+    <div id="welcome-banner" class="welcome-banner" role="status" aria-live="polite" hidden>
+        <p id="welcome-text">Welcome to my portfolio page!</p>
+        <button id="welcome-close" type="button" aria-label="Dismiss welcome message">&times;</button>
+    </div>
+
+    <header class="hero">
+        <nav class="navbar">
+            <a href="#home" class="logo">HS</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">
+                <span class="theme-icon" aria-hidden="true">🌙</span>
+                <span class="theme-label">Dark</span>
+            </button>
+        </nav>
+
+        <div class="hero-content" id="home">
+            <div class="profile-image">
+                <img src="images/profile.jpg" alt="Professional profile photo of Habiba Seif"
+                     onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+                <span class="initials">HS</span>
+            </div>
+
+            <div class="hero-text">
+                <p class="eyebrow">COMPUTER ENGINEERING STUDENT</p>
+                <h1>Habiba Seif</h1>
+                <p class="hero-subtitle">
+                    Computer Engineering student at The American University in Cairo
+                    with experience in software testing, cybersecurity, programming,
+                    databases, and embedded systems.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="button primary">View Projects</a>
+                    <a href="#contact" class="button secondary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" id="about">
+            <div class="section-heading">
+                <span class="section-number">01</span>
+                <div>
+                    <p class="section-label">PROFILE</p>
+                    <h2>About Me</h2>
+                </div>
+            </div>
+
+            <div class="about-card">
+                <p>
+                    I am a Computer Engineering student at The American University in Cairo,
+                    graduating in Fall 2026. My experience includes software development and
+                    testing, cybersecurity, database systems, programming, and computer
+                    architecture. I have worked in both industry and academic environments,
+                    including roles at Pixelogic Media, Deloitte, Nokia, and AUC.
+                </p>
+            </div>
+        </section>
+
+        <section class="section alternate" id="education">
+            <div class="section-heading">
+                <span class="section-number">02</span>
+                <div>
+                    <p class="section-label">ACADEMIC BACKGROUND</p>
+                    <h2>Education</h2>
+                </div>
+                <button type="button" class="toggle-btn" data-target="education-content" aria-expanded="true" aria-controls="education-content" data-label="Education">Hide Education</button>
+            </div>
+
+            <div class="collapsible" id="education-content">
+
+            <article class="timeline-card">
+                <div class="timeline-dot"></div>
+                <div class="card-top">
+                    <div>
+                        <h3>The American University in Cairo (AUC)</h3>
+                        <p class="role">Bachelor of Science in Computer Engineering</p>
+                    </div>
+                    <span class="date">Graduating Fall 2026</span>
+                </div>
+                <p class="muted-title">Relevant Coursework</p>
+                <div class="tags">
+                    <span>OOP</span>
+                    <span>Analysis & Algorithms</span>
+                    <span>Digital Design</span>
+                    <span>Assembly Language</span>
+                    <span>Computer Architecture</span>
+                    <span>Computer Networks</span>
+                    <span>Microelectronics</span>
+                    <span>Operating Systems</span>
+                    <span>Digital Signal Processing</span>
+                    <span>Distributed Systems</span>
+                </div>
+            </article>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <div class="section-heading">
+                <span class="section-number">03</span>
+                <div>
+                    <p class="section-label">PROFESSIONAL EXPERIENCE</p>
+                    <h2>Experience</h2>
+                </div>
+                <button type="button" class="toggle-btn" data-target="experience-content" aria-expanded="true" aria-controls="experience-content" data-label="Experience">Hide Experience</button>
+            </div>
+
+            <div class="collapsible" id="experience-content">
+
+            <div class="timeline">
+
+                <article class="experience-card">
+                    <div class="experience-marker"></div>
+                    <div class="experience-header">
+                        <div>
+                            <h3>Software Development Engineer in Test</h3>
+                            <h4>Pixelogic Media</h4>
+                        </div>
+                        <div class="experience-meta">
+                            <span>July 2025 – Sept 2025</span>
+                            <span>Egypt, Cairo · Onsite</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><strong>Tools & Technologies:</strong> Gained hands-on experience with JavaScript, APIs, Postman, Selenium, Maven, GitHub, and Sublime Merge in a software testing environment.</li>
+                        <li><strong>Test Automation:</strong> Built automated test cases using object-oriented programming principles and tools like YUI and Selenium. Automated both API- and UI-based test cases.</li>
+                        <li><strong>Production-Level Contribution:</strong> Developed test cases that were reviewed and merged into the company’s main codebase, supporting the delivery of high-quality software.</li>
+                    </ul>
+                </article>
+
+                <article class="experience-card">
+                    <div class="experience-marker"></div>
+                    <div class="experience-header">
+                        <div>
+                            <h3>Intern · Technology & Transformation – Cyber Defense & Resilience</h3>
+                            <h4>Deloitte</h4>
+                        </div>
+                        <div class="experience-meta">
+                            <span>Jan 2025 – Feb 2025</span>
+                            <span>Qatar, Doha · Onsite</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><strong>Research on Innovative Cyber-Resilience:</strong> Researched emerging technologies and trends in cyber resilience, including innovative solutions that enhance organizational defenses against evolving cyber risks.</li>
+                        <li><strong>Client Exposure:</strong> Got exposed to developing cybersecurity strategies to protect client systems against potential threats while considering industry standards and frameworks.</li>
+                        <li><strong>Digital Footprint & Threat Hunting:</strong> Acquired knowledge of digital footprint analysis to identify potential exposure of sensitive information and leveraged threat hunting techniques to proactively detect and mitigate cyber threats targeting client environments.</li>
+                    </ul>
+                </article>
+
+                <article class="experience-card">
+                    <div class="experience-marker"></div>
+                    <div class="experience-header">
+                        <div>
+                            <h3>Teaching Assistant · Fundamentals of Computing</h3>
+                            <h4>The American University in Cairo</h4>
+                        </div>
+                        <div class="experience-meta">
+                            <span>Sept 2024 – Dec 2024</span>
+                            <span>Cairo, Egypt · Onsite</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><strong>Lecture & Tutorial Assistance:</strong> Assisted in delivering lectures and tutorials, helping students grasp foundational concepts in computing such as algorithms, programming languages, and data structures.</li>
+                        <li><strong>Grading & Student Support:</strong> Graded assignments, provided feedback, and offered individual support to students, ensuring clear understanding and progress in their coursework.</li>
+                    </ul>
+                </article>
+
+                <article class="experience-card">
+                    <div class="experience-marker"></div>
+                    <div class="experience-header">
+                        <div>
+                            <h3>Intern · Computer & Telecommunications Engineering</h3>
+                            <h4>Nokia</h4>
+                        </div>
+                        <div class="experience-meta">
+                            <span>Aug 2024 – Sept 2024</span>
+                            <span>Cairo, Egypt · Hybrid</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><strong>Selection:</strong> Chosen from 4,500 applicants as one of the 120 accepted into the Nokia Summer Internship, awarded by Nokia headquarters in Egypt.</li>
+                        <li><strong>Technical Presentations:</strong> Presented the phishing detector program to Nokia engineers, showcasing its benefits and integration.</li>
+                        <li><strong>Phishing Program:</strong> Contributed to developing a phishing detector that detects phishing emails within a dataset of 6,000+ emails.</li>
+                        <li><strong>Networking Knowledge:</strong> Acquired practical knowledge in 5G and LTE technologies through Nokia demonstrations.</li>
+                    </ul>
+                </article>
+
+                <article class="experience-card">
+                    <div class="experience-marker"></div>
+                    <div class="experience-header">
+                        <div>
+                            <h3>ECPC Contributor</h3>
+                            <h4>Egyptian Collegiate Programming Contest</h4>
+                        </div>
+                        <div class="experience-meta">
+                            <span>2024 – Present</span>
+                            <span>Cairo, Egypt</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Solved advanced algorithmic problems using C++, focusing on Dynamic Programming and efficient problem-solving.</li>
+                        <li>Participated in local ECPC contests and contributed solutions to competitive programming challenges.</li>
+                    </ul>
+                </article>
+
+            </div>
+            </div>
+        </section>
+
+        <section class="section alternate" id="projects">
+            <div class="section-heading">
+                <span class="section-number">04</span>
+                <div>
+                    <p class="section-label">SELECTED WORK</p>
+                    <h2>Projects</h2>
+                </div>
+                <button type="button" class="toggle-btn" data-target="projects-content" aria-expanded="true" aria-controls="projects-content" data-label="Projects">Hide Projects</button>
+            </div>
+
+            <div class="collapsible" id="projects-content">
+
+            <div class="project-grid">
+
+                <article class="project-card featured">
+                    <div class="project-number">01</div>
+                    <h3>Database – WebCrawler</h3>
+                    <p>
+                        Full-stack web application connected to a remote MySQL database
+                        hosted on Aiven Cloud. Built a web crawler using the CKAN API and
+                        BeautifulSoup to populate a relational database with 2,000 datasets,
+                        89 organizations, and 33,000+ tags from Data.gov.
+                    </p>
+                    <button type="button" class="details-btn" aria-expanded="false" aria-controls="project-details-1">Show Details</button>
+                    <div class="project-details" id="project-details-1" hidden>
+                    <ul>
+                        <li>Designed a normalized schema with 9 interconnected tables.</li>
+                        <li>Implemented 11 query-driven features and statistical dashboards.</li>
+                        <li>Developed a Python ETL migration pipeline.</li>
+                    </ul>
+                    <div class="tags">
+                        <span>Python</span><span>MySQL</span><span>CKAN API</span><span>BeautifulSoup</span><span>ETL</span>
+                    </div>
+                    <a href="https://github.com/HabibaSeif/repo" target="_blank" rel="noopener" class="project-link">View on GitHub ↗</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">02</div>
+                    <h3>University Parking Application</h3>
+                    <p>
+                        Built a smart parking Android app using Java and Firebase, integrating
+                        a Python/Flask backend with Google Gemini AI to predict parking spot
+                        availability with 85% accuracy and reduce average search time by 50%.
+                    </p>
+                    <button type="button" class="details-btn" aria-expanded="false" aria-controls="project-details-2">Show Details</button>
+                    <div class="project-details" id="project-details-2" hidden>
+                    <div class="tags">
+                        <span>Java</span><span>Python</span><span>Flask</span><span>Firebase</span><span>Gemini AI</span>
+                    </div>
+                    <a href="https://github.com/AndrewAziz/repo" target="_blank" rel="noopener" class="project-link">View on GitHub ↗</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">03</div>
+                    <h3>GTA Game</h3>
+                    <p>
+                        Developed a GTA game project using the QT application, featuring four
+                        progressively challenging levels, enemies, and a shop system to
+                        enhance player abilities.
+                    </p>
+                    <button type="button" class="details-btn" aria-expanded="false" aria-controls="project-details-3">Show Details</button>
+                    <div class="project-details" id="project-details-3" hidden>
+                    <div class="tags"><span>C++</span><span>QT</span></div>
+                    <a href="https://github.com/HabibaSeif/repo" target="_blank" rel="noopener" class="project-link">View on GitHub ↗</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">04</div>
+                    <h3>Simple Digital Alarm Clock</h3>
+                    <p>
+                        Designed and implemented a digital alarm clock using BASYS3 peripherals,
+                        featuring a seven-segment display, blinking LED indicators, and push
+                        button controls for time and alarm settings.
+                    </p>
+                    <button type="button" class="details-btn" aria-expanded="false" aria-controls="project-details-4">Show Details</button>
+                    <div class="project-details" id="project-details-4" hidden>
+                    <div class="tags"><span>Verilog</span><span>TCL</span><span>C++</span></div>
+                    <a href="https://github.com/MalekFarouk/repo" target="_blank" rel="noopener" class="project-link">View on GitHub ↗</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">05</div>
+                    <h3>Logisim Simulator</h3>
+                    <p>
+                        Built a Logisim simulator in C++ with a team of three, incorporating
+                        file I/O for sequential circuits, gate libraries, and clock files,
+                        improving understanding of propagation delays and error handling.
+                    </p>
+                    <button type="button" class="details-btn" aria-expanded="false" aria-controls="project-details-5">Show Details</button>
+                    <div class="project-details" id="project-details-5" hidden>
+                    <div class="tags"><span>C++</span><span>File I/O</span><span>Digital Logic</span></div>
+                    <a href="https://github.com/HabibaSeif/repo" target="_blank" rel="noopener" class="project-link">View on GitHub ↗</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">06</div>
+                    <h3>Cache Simulator</h3>
+                    <p>
+                        Designed a cache simulator that models a multi-level cache system for
+                        both instruction and data memory, simulating movement between cache
+                        levels and main memory to analyze cache performance and efficiency.
+                    </p>
+                    <button type="button" class="details-btn" aria-expanded="false" aria-controls="project-details-6">Show Details</button>
+                    <div class="project-details" id="project-details-6" hidden>
+                    <div class="tags"><span>C++</span><span>C</span><span>CMake</span></div>
+                    <a href="https://github.com/HayaShalaby/repo" target="_blank" rel="noopener" class="project-link">View on GitHub ↗</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">07</div>
+                    <h3>RISC-V Simulator</h3>
+                    <p>
+                        Developed a RISC-V simulator to emulate instruction execution and
+                        memory management, providing insights into processor architecture
+                        and low-level operations.
+                    </p>
+                    <button type="button" class="details-btn" aria-expanded="false" aria-controls="project-details-7">Show Details</button>
+                    <div class="project-details" id="project-details-7" hidden>
+                    <div class="tags"><span>C++</span><span>C</span><span>CMake</span><span>RISC-V</span></div>
+                    <a href="https://github.com/HayaShalaby/repo" target="_blank" rel="noopener" class="project-link">View on GitHub ↗</a>
+                    </div>
+                </article>
+
+            </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="section-heading">
+                <span class="section-number">05</span>
+                <div>
+                    <p class="section-label">TECHNICAL TOOLKIT</p>
+                    <h2>Programming Skills</h2>
+                </div>
+                <button type="button" class="toggle-btn" data-target="skills-content" aria-expanded="true" aria-controls="skills-content" data-label="Skills">Hide Skills</button>
+            </div>
+
+            <div class="collapsible" id="skills-content">
+
+            <form id="skill-form" class="skill-form" novalidate>
+                    <label for="skill-input">Enter Skill:</label>
+                    <input type="text" id="skill-input" placeholder="e.g. Python" maxlength="30" autocomplete="off">
+                    <select id="skill-category" aria-label="Skill category">
+                        <option value="languages">Languages</option>
+                        <option value="tools">Technologies &amp; Tools</option>
+                    </select>
+                    <button type="submit" class="button add-btn">Add</button>
+                </form>
+                <p id="skill-message" class="form-message" role="alert"></p>
+
+                <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>Languages</h3>
+                    <div class="skill-list" id="languages-list">
+                        <span>C++</span><span>C</span><span>Java</span><span>C#</span>
+                        <span>SQL</span><span>JavaScript</span><span>RISC-V</span><span>Verilog</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Technologies & Tools</h3>
+                    <div class="skill-list" id="tools-list">
+                        <span>Microsoft SQL Server</span><span>XCode</span><span>Interface Builder</span>
+                        <span>APIs</span><span>Postman</span><span>Selenium</span><span>Maven</span>
+                        <span>GitHub</span><span>Firebase</span><span>Flask</span><span>CMake</span>
+                    </div>
+                </article>
+            </div>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div class="section-heading">
+                <span class="section-number">06</span>
+                <div>
+                    <p class="section-label">LET'S CONNECT</p>
+                    <h2>Contact</h2>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div>
+                    <h3>Interested in connecting?</h3>
+                    <p>
+                        Feel free to reach out through email or connect with me on LinkedIn.
+                    </p>
+                </div>
+
+                <!-- Replace the placeholder links below with your real contact information. -->
+                <div class="contact-links">
+                    <a href="mailto:habibaseif@aucegypt.edu" class="contact-item">
+                        <span class="contact-icon">@</span>
+                        <span>
+                            <small>Email</small>
+                            habibaseif@aucegypt.edu
+                        </span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/habiba-seif-159262306/" target="_blank" rel="noopener" class="contact-item">
+                        <span class="contact-icon">in</span>
+                        <span>
+                            <small>LinkedIn</small>
+                            https://www.linkedin.com/in/habiba-seif-159262306/
+                        </span>
+                    </a>
+
+                    <a href="https://github.com/HabibaSeif" target="_blank" rel="noopener" class="contact-item">
+                        <span class="contact-icon">GH</span>
+                        <span>
+                            <small>GitHub</small>
+                            github.com/HabibaSeif
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Feature: Contact form with JavaScript validation -->
+            <form id="contact-form" class="contact-form" novalidate>
+                <h3>Send me a message</h3>
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name">
+                    <span class="error" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com">
+                    <span class="error" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+                    <span class="error" id="message-error"></span>
+                </div>
+
+                <button type="submit" class="button submit-btn">Send Message</button>
+                <p id="form-status" class="form-message" role="alert"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Habiba Seif · Computer Engineering</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
