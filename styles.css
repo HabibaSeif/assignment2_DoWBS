@@ -881,3 +881,182 @@ input:focus, select:focus, textarea:focus {
         break-inside: avoid;
     }
 }
+
+
+/* ==========================================================
+   Colour & visual polish (added after feedback)
+   ========================================================== */
+:root {
+    --pink: #ec4899;
+    --teal: #0d9488;
+    --amber: #f59e0b;
+    /* soft section tints */
+    --tint-about: #f4f3ff;
+    --tint-edu: #e7f6f4;
+    --tint-exp: #fff4e8;
+    --tint-proj: #e9f0ff;
+    --tint-skills: #fdeff6;
+    --tint-contact: #f1f4f9;
+    /* rotating chip colours (background / text) */
+    --t1-bg: #ececff; --t1-fg: #4141a7;
+    --t2-bg: #d9f3ef; --t2-fg: #0b6b62;
+    --t3-bg: #fde4f0; --t3-fg: #a11d5c;
+    --t4-bg: #fdecc8; --t4-fg: #8a5a06;
+}
+[data-theme="dark"] {
+    --tint-about: #161b33;
+    --tint-edu: #112127;
+    --tint-exp: #211c1a;
+    --tint-proj: #141d36;
+    --tint-skills: #24182a;
+    --tint-contact: #0e1320;
+    --t1-bg: #2a2c58; --t1-fg: #c0c0ff;
+    --t2-bg: #123a38; --t2-fg: #7fe0d3;
+    --t3-bg: #44162f; --t3-fg: #ff9fcb;
+    --t4-bg: #3f3010; --t4-fg: #ffd278;
+}
+
+/* Full-width coloured bands behind each section */
+#about, #experience, #skills, #contact {
+    clip-path: inset(0 -100vmax);
+}
+#about      { background: var(--tint-about);  box-shadow: 0 0 0 100vmax var(--tint-about); }
+#experience { background: var(--tint-exp);    box-shadow: 0 0 0 100vmax var(--tint-exp); }
+#skills     { background: var(--tint-skills); box-shadow: 0 0 0 100vmax var(--tint-skills); }
+#contact    { background: var(--tint-contact);box-shadow: 0 0 0 100vmax var(--tint-contact); }
+#education  { background: var(--tint-edu); }
+#projects   { background: var(--tint-proj); }
+
+/* Hero: extra colour glows + gradient name + stats */
+.hero {
+    background:
+        radial-gradient(circle at 85% 15%, rgba(113, 113, 230, 0.4), transparent 30%),
+        radial-gradient(circle at 8% 92%, rgba(236, 72, 153, 0.25), transparent 30%),
+        radial-gradient(circle at 55% 100%, rgba(13, 148, 136, 0.22), transparent 28%),
+        linear-gradient(135deg, #0f172a 0%, #171d36 55%, #26235b 100%);
+}
+.hero h1 {
+    background: linear-gradient(90deg, #ffffff 30%, #c4b5fd 70%, #f9a8d4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.hero-stats {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 36px;
+}
+.hero-stats div {
+    padding: 12px 20px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(4px);
+}
+.hero-stats strong {
+    display: block;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+.hero-stats span {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+}
+.button.primary { background: linear-gradient(90deg, #fff, #e4e0ff); }
+
+/* Section headings: number badge + gradient underline */
+.section-number {
+    width: 42px;
+    height: 42px;
+    padding-top: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent), var(--pink));
+    color: #fff;
+    box-shadow: 0 8px 18px rgba(91, 91, 214, 0.35);
+}
+.section-heading h2::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 4px;
+    border-radius: 4px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, var(--accent), var(--pink), var(--amber));
+}
+
+/* Cards: coloured accent edges */
+.about-card { border-left: 6px solid var(--accent); }
+.timeline-card { border-top: 4px solid var(--teal); }
+.skill-card { box-shadow: var(--shadow); border-top: 4px solid var(--accent); }
+.skill-card:nth-child(2) { border-top-color: var(--pink); }
+.contact-form { border-top: 4px solid var(--pink); }
+
+.timeline { border-left: 0; border-image: none; position: relative; }
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, var(--accent), var(--pink), var(--amber));
+}
+.experience-card { border-left: 5px solid var(--accent); }
+.experience-card:nth-child(4n+2) { border-left-color: var(--teal); }
+.experience-card:nth-child(4n+3) { border-left-color: var(--pink); }
+.experience-card:nth-child(4n+4) { border-left-color: var(--amber); }
+.experience-marker {
+    background: linear-gradient(135deg, var(--accent), var(--pink));
+    box-shadow: 0 0 0 5px rgba(91, 91, 214, 0.18);
+}
+
+/* Project cards: coloured top edge + number badge */
+.project-card { border-top: 4px solid var(--accent); }
+.project-card:nth-child(4n+3) { border-top-color: var(--teal); }
+.project-card:nth-child(4n+4) { border-top-color: var(--pink); }
+.project-card:nth-child(4n+5) { border-top-color: var(--amber); }
+.project-card.featured {
+    background: linear-gradient(135deg, var(--surface) 60%, var(--accent-light));
+}
+.project-number {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--accent-light);
+    color: var(--accent-dark);
+    font-size: 0.82rem;
+}
+
+/* Colourful rotating chips (tags + skills) */
+.tags span:nth-child(4n+1), .skill-list span:nth-child(4n+1) { background: var(--t1-bg); color: var(--t1-fg); }
+.tags span:nth-child(4n+2), .skill-list span:nth-child(4n+2) { background: var(--t2-bg); color: var(--t2-fg); }
+.tags span:nth-child(4n+3), .skill-list span:nth-child(4n+3) { background: var(--t3-bg); color: var(--t3-fg); }
+.tags span:nth-child(4n+4), .skill-list span:nth-child(4n+4) { background: var(--t4-bg); color: var(--t4-fg); }
+
+/* Contact + footer */
+.contact-card {
+    background: linear-gradient(135deg, #111827 0%, #26235b 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.contact-item:hover { background: rgba(255, 255, 255, 0.07); }
+footer { background: linear-gradient(90deg, #0b101a, #1c1a45, #0b101a); }
+
+@media (max-width: 650px) {
+    .hero-stats { gap: 10px; }
+    .hero-stats div { padding: 10px 14px; }
+    .section-number { width: 36px; height: 36px; }
+}
+@media print {
+    #about, #experience, #skills, #contact { box-shadow: none; clip-path: none; }
+    .hero-stats { display: none; }
+}
+
